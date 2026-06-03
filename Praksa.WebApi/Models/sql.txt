@@ -1,0 +1,215 @@
+﻿CREATE TABLE "CinemaLocation" (
+    "Id" INT PRIMARY KEY,
+    "Name" VARCHAR(100) NOT NULL,
+    "Address" VARCHAR(150) NOT NULL
+);
+
+CREATE TABLE "Movie" (
+    "Id" INT PRIMARY KEY,
+    "Title" VARCHAR(100) NOT NULL,
+    "Duration" INT NOT NULL,
+    "Genre" VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE "User" (
+    "Id" INT PRIMARY KEY,
+    "FirstName" VARCHAR(50) NOT NULL,
+    "LastName" VARCHAR(50) NOT NULL,
+    "Email" VARCHAR(100) NOT NULL UNIQUE
+);
+
+CREATE TABLE "Hall" (
+    "Id" INT PRIMARY KEY,
+    "Name" VARCHAR(50) NOT NULL,
+    "Capacity" INT NOT NULL,
+    "CinemaLocationId" INT NOT NULL,
+    CONSTRAINT "FK_Hall_CinemaLocation"
+        FOREIGN KEY ("CinemaLocationId")
+        REFERENCES "CinemaLocation"("Id")
+);
+
+CREATE TABLE "Projection" (
+    "Id" INT PRIMARY KEY,
+    "ShowTime" TIMESTAMP NOT NULL,
+    "TicketPrice" DOUBLE PRECISION NOT NULL,
+    "HallId" INT NOT NULL,
+    "MovieId" INT NOT NULL,
+    CONSTRAINT "FK_Projection_Hall"
+        FOREIGN KEY ("HallId")
+        REFERENCES "Hall"("Id"),
+    CONSTRAINT "FK_Projection_Movie"
+        FOREIGN KEY ("MovieId")
+        REFERENCES "Movie"("Id")
+);
+
+CREATE TABLE "Reservation" (
+    "Id" INT PRIMARY KEY,
+    "CreatedAt" TIMESTAMP NOT NULL,
+    "TicketCount" INT NOT NULL CHECK ("TicketCount" >= 1 AND "TicketCount" <= 5),
+    "UserId" INT NOT NULL,
+    "ProjectionId" INT NOT NULL,
+    CONSTRAINT "FK_Reservation_User"
+        FOREIGN KEY ("UserId")
+        REFERENCES "User"("Id"),
+    CONSTRAINT "FK_Reservation_Projection"
+        FOREIGN KEY ("ProjectionId")
+        REFERENCES "Projection"("Id")
+);
+
+INSERT INTO "CinemaLocation" ("Id", "Name", "Address")
+VALUES
+(1, 'Cinestar Zagreb', 'Avenija Dubrava 1'),
+(2, 'Kino Europa', 'Varšavska 3');
+
+INSERT INTO "Movie" ("Id", "Title", "Duration", "Genre")
+VALUES
+(1, 'Inception', 148, 'Sci-Fi'),
+(2, 'Interstellar', 169, 'Sci-Fi'),
+(3, 'Avatar', 162, 'Adventure');
+
+INSERT INTO "User" ("Id", "FirstName", "LastName", "Email")
+VALUES
+(1, 'Luka', 'Stanković', 'luka@gmail.com'),
+(2, 'Ana', 'Marić', 'ana@gmail.com');
+
+INSERT INTO "Hall" ("Id", "Name", "Capacity", "CinemaLocationId")
+VALUES
+(1, 'Hall 1', 120, 1),
+(2, 'Hall 2', 80, 1),
+(3, 'Main Hall', 150, 2);
+
+INSERT INTO "Projection" ("Id", "ShowTime", "TicketPrice", "HallId", "MovieId")
+VALUES
+(1, '2026-06-03 18:00:00', 6.50, 1, 1),
+(2, '2026-06-03 20:30:00', 7.00, 2, 2),
+(3, '2026-06-04 19:15:00', 6.00, 3, 3);
+
+INSERT INTO "Reservation" ("Id", "CreatedAt", "TicketCount", "UserId", "ProjectionId")
+VALUES
+(1, '2026-06-03 12:00:00', 2, 1, 1),
+(2, '2026-06-03 12:05:00', 3, 2, 2),
+(3, '2026-06-03 12:10:00', 1, 1, 3);
+
+INSERT INTO "CinemaLocation" ("Id", "Name", "Address")
+VALUES
+(3, 'Kaptol Boutique Cinema', 'Nova Ves 17'),
+(4, 'Cinestar Split', 'Mall of Split, Split 93');
+
+INSERT INTO "Movie" ("Id", "Title", "Duration", "Genre")
+VALUES
+(4, 'The Dark Knight', 152, 'Action'),
+(5, 'The Matrix', 136, 'Sci-Fi');
+
+INSERT INTO "User" ("Id", "FirstName", "LastName", "Email")
+VALUES
+(3, 'Marko', 'Horvat', 'marko.horvat@example.com'),
+(4, 'Ivana', 'Kovač', 'ivana.kovac@example.com');
+
+INSERT INTO "Hall" ("Id", "Name", "Capacity", "CinemaLocationId")
+VALUES
+(4, 'VIP Hall', 60, 3),
+(5, '4DX Hall', 140, 4)
+
+INSERT INTO "Projection" ("Id", "ShowTime", "TicketPrice", "HallId", "MovieId")
+VALUES
+(4, '2026-06-05 21:00:00', 8.50, 4, 4), 
+(5, '2026-06-06 17:45:00', 7.50, 5, 5);
+
+INSERT INTO "Reservation" ("Id", "CreatedAt", "TicketCount", "UserId", "ProjectionId")
+VALUES
+(4, '2026-06-03 13:00:00', 2, 3, 4),  
+(5, '2026-06-03 13:05:00', 5, 3, 5);  
+
+
+UPDATE "User"
+SET "Email" = 'luka.stankovic@gmail.com'
+WHERE "Id" = 1;
+
+UPDATE "CinemaLocation"
+SET "Name" = 'Cinestar Osijek'
+WHERE "Id" = 1;
+
+UPDATE "Reservation"
+SET "TicketCount" = 4
+WHERE "Id" = 2;
+
+
+SELECT * FROM "CinemaLocation";
+SELECT * FROM "Movie";
+SELECT * FROM "User";
+SELECT * FROM "Hall";
+SELECT * FROM "Projection";
+SELECT * FROM "Reservation";
+
+SELECT * FROM "Projection" WHERE "TicketPrice" <=7;
+
+SELECT "Id", "Title", "Duration", "Genre"
+FROM "Movie"
+WHERE "Genre" = 'Sci-Fi';
+
+SELECT "Id", "CreatedAt", "TicketCount", "UserId", "ProjectionId"
+FROM "Reservation"
+WHERE "TicketCount" > 3;
+
+SELECT
+    p."Id",
+    p."ShowTime",
+    p."TicketPrice",
+    m."Title" AS "MovieTitle",
+    h."Name" AS "HallName",
+    cl."Name" AS "CinemaLocationName"
+FROM "Projection" p
+INNER JOIN "Movie" m ON p."MovieId" = m."Id"
+INNER JOIN "Hall" h ON p."HallId" = h."Id"
+INNER JOIN "CinemaLocation" cl ON h."CinemaLocationId" = cl."Id";
+
+SELECT
+    r."Id",
+    r."CreatedAt",
+    r."TicketCount",
+    u."FirstName",
+    u."LastName",
+    m."Title"
+FROM "Reservation" r
+INNER JOIN "User" u ON r."UserId" = u."Id"
+INNER JOIN "Projection" p ON r."ProjectionId" = p."Id"
+INNER JOIN "Movie" m ON p."MovieId" = m."Id";
+
+SELECT
+    cl."Name" AS "CinemaLocation",
+    h."Name" AS "HallName",
+    p."ShowTime"
+FROM "CinemaLocation" cl
+INNER JOIN "Hall" h ON h."CinemaLocationId" = cl."Id"
+INNER JOIN "Projection" p ON p."HallId" = h."Id";
+
+SELECT
+    u."Id",
+    u."FirstName",
+    u."LastName",
+    r."Id"          AS "ReservationId",
+    r."TicketCount",
+    r."CreatedAt"
+FROM "User" u
+LEFT JOIN "Reservation" r
+    ON r."UserId" = u."Id";
+
+/* sql za jučerašnje modele */
+CREATE TABLE "FootballClub" (
+    "Id" INT PRIMARY KEY,
+    "Name" VARCHAR(100) NOT NULL,
+    "Country" VARCHAR(100) NOT NULL,
+    "FoundedYear" INT NOT NULL
+);
+
+CREATE TABLE "FootballPlayer" (
+    "Id" INT PRIMARY KEY,
+    "Name" VARCHAR(100) NOT NULL,
+    "ClubId" INT NOT NULL,
+    "JerseyNumber" INT NOT NULL,
+    "Position" VARCHAR(50) NOT NULL,
+    "MarketValue" DOUBLE PRECISION NOT NULL,
+    CONSTRAINT "FK_FootballPlayer_FootballClub"
+        FOREIGN KEY ("ClubId")
+        REFERENCES "FootballClub"("Id")
+);

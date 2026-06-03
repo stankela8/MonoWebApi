@@ -33,3 +33,4 @@ C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\obj\Debug\net8.0\refint\Praksa.W
 C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\obj\Debug\net8.0\Praksa.WebApi.pdb
 C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\obj\Debug\net8.0\Praksa.WebApi.genruntimeconfig.cache
 C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\obj\Debug\net8.0\ref\Praksa.WebApi.dll
+C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\obj\Debug\net8.0\Praksa.WebApi.sourcelink.json

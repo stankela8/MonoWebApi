@@ -32,53 +32,85 @@ namespace Praksa.WebApi.Controllers
         };
 
         [HttpGet]
-        public List<FootballClub> GetAllClubs()
+        public IActionResult GetAllClubs(string? country = null, int? foundedAfter = null)
         {
-            return clubs;
+            var result = clubs.AsEnumerable();
+
+            if (!string.IsNullOrWhiteSpace(country))
+            {
+                result = result.Where(c => c.Country.ToLower() == country.ToLower());
+            }
+
+            if (foundedAfter.HasValue)
+            {
+                result = result.Where(c => c.FoundedYear > foundedAfter.Value);
+            }
+
+            return Ok(result.ToList());
         }
 
         [HttpGet("{id}")]
-        public FootballClub GetClubById(int id)
-        {
-            return clubs.FirstOrDefault(c => c.Id == id);
-        }
-
-        [HttpPost]
-        public string AddClub(FootballClub newClub)
-        {
-            clubs.Add(newClub);
-            return "Club added successfully.";
-        }
-
-        [HttpPut("{id}")]
-        public string UpdateClub(int id, FootballClub updatedClub)
+        public IActionResult GetClubById(int id)
         {
             var club = clubs.FirstOrDefault(c => c.Id == id);
 
             if (club == null)
             {
-                return "Club not found.";
+                return NotFound("Club not found.");
+            }
+
+            return Ok(club);
+        }
+
+        [HttpPost]
+        public IActionResult AddClub([FromBody] FootballClub newClub)
+        {
+            if (newClub == null)
+            {
+                return BadRequest("Club data is required.");
+            }
+
+            newClub.Id = clubs.Max(c => c.Id) + 1;
+            clubs.Add(newClub);
+
+            return Ok(newClub);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateClub(int id, [FromBody] FootballClub updatedClub)
+        {
+            if (updatedClub == null)
+            {
+                return BadRequest("Updated club data is required.");
+            }
+
+            var club = clubs.FirstOrDefault(c => c.Id == id);
+
+            if (club == null)
+            {
+                return NotFound("Club not found.");
             }
 
             club.Name = updatedClub.Name;
             club.Country = updatedClub.Country;
             club.FoundedYear = updatedClub.FoundedYear;
 
-            return "Club updated successfully.";
+            return Ok(club);
         }
 
         [HttpDelete("{id}")]
-        public string DeleteClub(int id)
+        public IActionResult DeleteClub(int id)
         {
             var club = clubs.FirstOrDefault(c => c.Id == id);
 
             if (club == null)
             {
-                return "Club not found.";
+                return NotFound("Club not found.");
             }
 
             clubs.Remove(club);
-            return "Club deleted successfully.";
+
+            return Ok("Club deleted successfully.");
         }
     }
 }
