@@ -30,7 +30,7 @@
     "Parameters": [
       {
         "Name": "newClub",
-        "Type": "Praksa.WebApi.FootballClub",
+        "Type": "Praksa.Common.FootballClub",
         "IsRequired": true
       }
     ],
@@ -67,7 +67,7 @@
       },
       {
         "Name": "updatedClub",
-        "Type": "Praksa.WebApi.FootballClub",
+        "Type": "Praksa.Common.FootballClub",
         "IsRequired": true
       }
     ],
@@ -120,7 +120,7 @@
     "Parameters": [
       {
         "Name": "newPlayer",
-        "Type": "Praksa.WebApi.FootballPlayer",
+        "Type": "Praksa.Common.FootballPlayer",
         "IsRequired": true
       }
     ],
@@ -157,7 +157,7 @@
       },
       {
         "Name": "updatedPlayer",
-        "Type": "Praksa.WebApi.FootballPlayer",
+        "Type": "Praksa.Common.FootballPlayer",
         "IsRequired": true
       }
     ],
@@ -173,6 +173,22 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Praksa.WebApi.Controllers.FootballPlayersController",
+    "Method": "GetPlayersByClubId",
+    "RelativePath": "api/FootballPlayers/byClub/{clubId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clubId",
         "Type": "System.Int32",
         "IsRequired": true
       }

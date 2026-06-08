@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Praksa.Common\Praksa.Common.csproj" />
+    <ProjectReference Include="..\Praksa.Repository\Praksa.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

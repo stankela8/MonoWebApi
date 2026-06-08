@@ -1,0 +1,12 @@
+C:\Users\Luka\source\repos\Praksa\Praksa.Common\bin\Debug\net8.0\Praksa.Common.deps.json
+C:\Users\Luka\source\repos\Praksa\Praksa.Common\bin\Debug\net8.0\Praksa.Common.dll
+C:\Users\Luka\source\repos\Praksa\Praksa.Common\bin\Debug\net8.0\Praksa.Common.pdb
+C:\Users\Luka\source\repos\Praksa\Praksa.Common\obj\Debug\net8.0\Praksa.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luka\source\repos\Praksa\Praksa.Common\obj\Debug\net8.0\Praksa.Common.AssemblyInfoInputs.cache
+C:\Users\Luka\source\repos\Praksa\Praksa.Common\obj\Debug\net8.0\Praksa.Common.AssemblyInfo.cs
+C:\Users\Luka\source\repos\Praksa\Praksa.Common\obj\Debug\net8.0\Praksa.Common.csproj.CoreCompileInputs.cache
+C:\Users\Luka\source\repos\Praksa\Praksa.Common\obj\Debug\net8.0\Praksa.Common.sourcelink.json
+C:\Users\Luka\source\repos\Praksa\Praksa.Common\obj\Debug\net8.0\Praksa.Common.dll
+C:\Users\Luka\source\repos\Praksa\Praksa.Common\obj\Debug\net8.0\refint\Praksa.Common.dll
+C:\Users\Luka\source\repos\Praksa\Praksa.Common\obj\Debug\net8.0\Praksa.Common.pdb
+C:\Users\Luka\source\repos\Praksa\Praksa.Common\obj\Debug\net8.0\ref\Praksa.Common.dll

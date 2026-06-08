@@ -288,6 +288,29 @@
           }
         }
       }
+    },
+    "/api/FootballPlayers/byClub/{clubId}": {
+      "get": {
+        "tags": [
+          "FootballPlayers"
+        ],
+        "parameters": [
+          {
+            "name": "clubId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {

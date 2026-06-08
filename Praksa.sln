@@ -1,9 +1,26 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.37314.3 d17.14
+VisualStudioVersion = 17.14.37314.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Praksa.WebApi", "Praksa.WebApi\Praksa.WebApi.csproj", "{517CE90B-25E9-4A96-847C-A33FB1EAAF0F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0} = {4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}
+		{FB88C021-C15D-4243-B68C-E23D67CAFFEC} = {FB88C021-C15D-4243-B68C-E23D67CAFFEC}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Praksa.Service", "Praksa.Service\Praksa.Service.csproj", "{FB88C021-C15D-4243-B68C-E23D67CAFFEC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0} = {4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}
+		{F21829C5-1583-4491-8FB0-BED84DF233AB} = {F21829C5-1583-4491-8FB0-BED84DF233AB}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Praksa.Repository", "Praksa.Repository\Praksa.Repository.csproj", "{F21829C5-1583-4491-8FB0-BED84DF233AB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0} = {4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Praksa.Common", "Praksa.Common\Praksa.Common.csproj", "{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +32,18 @@ Global
 		{517CE90B-25E9-4A96-847C-A33FB1EAAF0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{517CE90B-25E9-4A96-847C-A33FB1EAAF0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{517CE90B-25E9-4A96-847C-A33FB1EAAF0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB88C021-C15D-4243-B68C-E23D67CAFFEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB88C021-C15D-4243-B68C-E23D67CAFFEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB88C021-C15D-4243-B68C-E23D67CAFFEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB88C021-C15D-4243-B68C-E23D67CAFFEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F21829C5-1583-4491-8FB0-BED84DF233AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F21829C5-1583-4491-8FB0-BED84DF233AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F21829C5-1583-4491-8FB0-BED84DF233AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F21829C5-1583-4491-8FB0-BED84DF233AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

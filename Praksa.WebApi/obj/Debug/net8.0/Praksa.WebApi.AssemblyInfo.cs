@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Praksa.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+43a8377e742e4a4fb40fb3ee6da42f1138e53a41")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+689f8747aa95e1d040d60da85fc4946e99f90a89")]
 [assembly: System.Reflection.AssemblyProductAttribute("Praksa.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Praksa.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
