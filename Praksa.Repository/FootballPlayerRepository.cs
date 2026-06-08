@@ -5,7 +5,7 @@ namespace Praksa.Repository
 {
     public class FootballPlayerRepository
     {
-        public List<FootballPlayer> GetAll(string? position = null, double? minValue = null)
+        public List<FootballPlayer> GetAll(FootballPlayerFilter filter)
         {
             var players = new List<FootballPlayer>();
             var db = new DatabaseHelper();
@@ -14,22 +14,28 @@ namespace Praksa.Repository
             connection.Open();
 
             var query = @"SELECT ""Id"", ""Name"", ""ClubId"", ""JerseyNumber"", ""Position"", ""MarketValue""
-                  FROM ""FootballPlayer""
-                  WHERE 1=1";
+                          FROM ""FootballPlayer""
+                          WHERE 1=1";
 
             using var command = new NpgsqlCommand();
             command.Connection = connection;
 
-            if (!string.IsNullOrWhiteSpace(position))
+            if (!string.IsNullOrWhiteSpace(filter.Position))
             {
                 query += @" AND LOWER(""Position"") = LOWER(@position)";
-                command.Parameters.AddWithValue("@position", position);
+                command.Parameters.AddWithValue("@position", filter.Position);
             }
 
-            if (minValue.HasValue)
+            if (filter.MinValue.HasValue)
             {
                 query += @" AND ""MarketValue"" >= @minValue";
-                command.Parameters.AddWithValue("@minValue", minValue.Value);
+                command.Parameters.AddWithValue("@minValue", filter.MinValue.Value);
+            }
+
+            if (filter.ClubId.HasValue)
+            {
+                query += @" AND ""ClubId"" = @clubId";
+                command.Parameters.AddWithValue("@clubId", filter.ClubId.Value);
             }
 
             query += @" ORDER BY ""Id""";

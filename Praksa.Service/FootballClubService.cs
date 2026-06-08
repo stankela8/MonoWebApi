@@ -5,10 +5,10 @@ namespace Praksa.Service
 {
     public class FootballClubService
     {
-        public List<FootballClub> GetAllClubs(string? country = null, int? foundedAfter = null)
+        public List<FootballClub> GetAllClubs(FootballClubFilter filter)
         {
             var repo = new FootballClubRepository();
-            return repo.GetAll(country, foundedAfter);
+            return repo.GetAll(filter);
         }
 
         public FootballClub? GetClubById(int id)

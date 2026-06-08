@@ -5,10 +5,10 @@ namespace Praksa.Service
 {
     public class FootballPlayerService
     {
-        public List<FootballPlayer> GetAllPlayers(string? position = null, double? minValue = null)
+        public List<FootballPlayer> GetAllPlayers(FootballPlayerFilter filter)
         {
             var repo = new FootballPlayerRepository();
-            return repo.GetAll(position, minValue);
+            return repo.GetAll(filter);
         }
 
         public FootballPlayer? GetPlayerById(int id)

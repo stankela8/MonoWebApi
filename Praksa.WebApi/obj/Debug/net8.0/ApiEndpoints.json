@@ -8,12 +8,12 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "country",
+        "Name": "Country",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "foundedAfter",
+        "Name": "FoundedAfter",
         "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       }
@@ -98,13 +98,18 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "position",
+        "Name": "Position",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "minValue",
+        "Name": "MinValue",
         "Type": "System.Nullable\u00601[[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ClubId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       }
     ],

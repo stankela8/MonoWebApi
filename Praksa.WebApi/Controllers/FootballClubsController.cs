@@ -9,15 +9,10 @@ namespace Praksa.WebApi.Controllers
     public class FootballClubsController : ControllerBase
     {
         [HttpGet]
-        public IActionResult GetAllClubs(string? country = null, int? foundedAfter = null)
+        public IActionResult GetAllClubs([FromQuery] FootballClubFilter filter)
         {
             var service = new FootballClubService();
-            var clubs = service.GetAllClubs(country, foundedAfter);
-
-            if(clubs.Count==0)
-            {
-                return NotFound("No clubs found");
-            }
+            var clubs = service.GetAllClubs(filter);
             return Ok(clubs);
         }
 

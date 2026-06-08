@@ -5,7 +5,7 @@ namespace Praksa.Repository
 {
     public class FootballClubRepository
     {
-        public List<FootballClub> GetAll(string? country = null, int? foundedAfter = null)
+        public List<FootballClub> GetAll(FootballClubFilter filter)
         {
             var clubs = new List<FootballClub>();
             var db = new DatabaseHelper();
@@ -14,22 +14,22 @@ namespace Praksa.Repository
             connection.Open();
 
             var query = @"SELECT ""Id"", ""Name"", ""Country"", ""FoundedYear""
-                  FROM ""FootballClub""
-                  WHERE 1=1";
+                          FROM ""FootballClub""
+                          WHERE 1=1";
 
             using var command = new NpgsqlCommand();
             command.Connection = connection;
 
-            if (!string.IsNullOrWhiteSpace(country))
+            if (!string.IsNullOrWhiteSpace(filter.Country))
             {
                 query += @" AND LOWER(""Country"") = LOWER(@country)";
-                command.Parameters.AddWithValue("@country", country);
+                command.Parameters.AddWithValue("@country", filter.Country);
             }
 
-            if (foundedAfter.HasValue)
+            if (filter.FoundedAfter.HasValue)
             {
                 query += @" AND ""FoundedYear"" > @foundedAfter";
-                command.Parameters.AddWithValue("@foundedAfter", foundedAfter.Value);
+                command.Parameters.AddWithValue("@foundedAfter", filter.FoundedAfter.Value);
             }
 
             query += @" ORDER BY ""Id""";

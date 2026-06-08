@@ -12,14 +12,14 @@
         ],
         "parameters": [
           {
-            "name": "country",
+            "name": "Country",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "foundedAfter",
+            "name": "FoundedAfter",
             "in": "query",
             "schema": {
               "type": "integer",
@@ -154,18 +154,26 @@
         ],
         "parameters": [
           {
-            "name": "position",
+            "name": "Position",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "minValue",
+            "name": "MinValue",
             "in": "query",
             "schema": {
               "type": "number",
               "format": "double"
+            }
+          },
+          {
+            "name": "ClubId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
             }
           }
         ],

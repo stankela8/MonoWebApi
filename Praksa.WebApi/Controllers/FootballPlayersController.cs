@@ -9,10 +9,10 @@ namespace Praksa.WebApi.Controllers
     public class FootballPlayersController : ControllerBase
     {
         [HttpGet]
-        public IActionResult GetAllPlayers(string? position = null, double? minValue = null)
+        public IActionResult GetAllPlayers([FromQuery] FootballPlayerFilter filter)
         {
             var service = new FootballPlayerService();
-            var players = service.GetAllPlayers(position, minValue);
+            var players = service.GetAllPlayers(filter);
             return Ok(players);
         }
 
