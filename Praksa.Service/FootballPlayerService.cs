@@ -5,57 +5,58 @@ namespace Praksa.Service
 {
     public class FootballPlayerService
     {
-        public List<FootballPlayer> GetAllPlayers(FootballPlayerFilter filter)
+        public async Task<List<FootballPlayer>> GetAllPlayersAsync(FootballPlayerFilter filter)
         {
             var repo = new FootballPlayerRepository();
-            return repo.GetAll(filter);
+            return await repo.GetAllAsync(filter);
         }
 
-        public FootballPlayer? GetPlayerById(int id)
+        public async Task<FootballPlayer?> GetPlayerByIdAsync(int id)
         {
             var repo = new FootballPlayerRepository();
-            return repo.GetById(id);
+            return await repo.GetByIdAsync(id);
         }
 
-        public List<FootballPlayer> GetPlayersByClubId(int clubId)
+        public async Task<List<FootballPlayer>> GetPlayersByClubIdAsync(int clubId)
         {
             var repo = new FootballPlayerRepository();
-            return repo.GetByClubId(clubId);
+            return await repo.GetByClubIdAsync(clubId);
         }
-        public FootballPlayer? AddPlayer(FootballPlayer player)
+
+        public async Task<FootballPlayer?> AddPlayerAsync(FootballPlayer player)
         {
             var clubRepo = new FootballClubRepository();
-            var existingClub = clubRepo.GetById(player.ClubId);
+            var existingClub = await clubRepo.GetByIdAsync(player.ClubId);
 
             if (existingClub == null)
-            {
                 return null;
-            }
 
-            var repo = new FootballPlayerRepository();
-            player.Id = repo.GetNextId();
-            repo.Insert(player);
-            return player;
+            var playerRepo = new FootballPlayerRepository();
+            player.Id = await playerRepo.GetNextIdAsync();
+            return await playerRepo.InsertAsync(player);
         }
 
-        public bool UpdatePlayer(int id, FootballPlayer player)
+        public async Task<FootballPlayer?> UpdatePlayerAsync(int id, FootballPlayer player)
         {
+            var playerRepo = new FootballPlayerRepository();
+            var existingPlayer = await playerRepo.GetByIdAsync(id);
+
+            if (existingPlayer == null)
+                return null;
+
             var clubRepo = new FootballClubRepository();
-            var existingClub = clubRepo.GetById(player.ClubId);
+            var existingClub = await clubRepo.GetByIdAsync(player.ClubId);
 
             if (existingClub == null)
-            {
-                return false;
-            }
+                return null;
 
-            var repo = new FootballPlayerRepository();
-            return repo.Update(id, player);
+            return await playerRepo.UpdateAsync(id, player);
         }
 
-        public bool DeletePlayer(int id)
+        public async Task<bool> DeletePlayerAsync(int id)
         {
             var repo = new FootballPlayerRepository();
-            return repo.Delete(id);
+            return await repo.DeleteAsync(id);
         }
     }
 }

@@ -1,12 +1,17 @@
 [
   {
     "ContainingType": "Praksa.WebApi.Controllers.FootballClubsController",
-    "Method": "GetAllClubs",
+    "Method": "GetAllClubsAsync",
     "RelativePath": "api/FootballClubs",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
       {
         "Name": "Country",
         "Type": "System.String",
@@ -22,14 +27,14 @@
   },
   {
     "ContainingType": "Praksa.WebApi.Controllers.FootballClubsController",
-    "Method": "AddClub",
+    "Method": "AddClubAsync",
     "RelativePath": "api/FootballClubs",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "newClub",
+        "Name": "club",
         "Type": "Praksa.Common.FootballClub",
         "IsRequired": true
       }
@@ -38,7 +43,7 @@
   },
   {
     "ContainingType": "Praksa.WebApi.Controllers.FootballClubsController",
-    "Method": "GetClubById",
+    "Method": "GetClubByIdAsync",
     "RelativePath": "api/FootballClubs/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -54,7 +59,7 @@
   },
   {
     "ContainingType": "Praksa.WebApi.Controllers.FootballClubsController",
-    "Method": "UpdateClub",
+    "Method": "UpdateClubAsync",
     "RelativePath": "api/FootballClubs/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -66,7 +71,7 @@
         "IsRequired": true
       },
       {
-        "Name": "updatedClub",
+        "Name": "club",
         "Type": "Praksa.Common.FootballClub",
         "IsRequired": true
       }
@@ -75,7 +80,7 @@
   },
   {
     "ContainingType": "Praksa.WebApi.Controllers.FootballClubsController",
-    "Method": "DeleteClub",
+    "Method": "DeleteClubAsync",
     "RelativePath": "api/FootballClubs/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -91,12 +96,17 @@
   },
   {
     "ContainingType": "Praksa.WebApi.Controllers.FootballPlayersController",
-    "Method": "GetAllPlayers",
+    "Method": "GetAllPlayersAsync",
     "RelativePath": "api/FootballPlayers",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
       {
         "Name": "Position",
         "Type": "System.String",
@@ -117,14 +127,14 @@
   },
   {
     "ContainingType": "Praksa.WebApi.Controllers.FootballPlayersController",
-    "Method": "AddPlayer",
+    "Method": "AddPlayerAsync",
     "RelativePath": "api/FootballPlayers",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "newPlayer",
+        "Name": "player",
         "Type": "Praksa.Common.FootballPlayer",
         "IsRequired": true
       }
@@ -133,7 +143,7 @@
   },
   {
     "ContainingType": "Praksa.WebApi.Controllers.FootballPlayersController",
-    "Method": "GetPlayerById",
+    "Method": "GetPlayerByIdAsync",
     "RelativePath": "api/FootballPlayers/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -149,7 +159,7 @@
   },
   {
     "ContainingType": "Praksa.WebApi.Controllers.FootballPlayersController",
-    "Method": "UpdatePlayer",
+    "Method": "UpdatePlayerAsync",
     "RelativePath": "api/FootballPlayers/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -161,7 +171,7 @@
         "IsRequired": true
       },
       {
-        "Name": "updatedPlayer",
+        "Name": "player",
         "Type": "Praksa.Common.FootballPlayer",
         "IsRequired": true
       }
@@ -170,7 +180,7 @@
   },
   {
     "ContainingType": "Praksa.WebApi.Controllers.FootballPlayersController",
-    "Method": "DeletePlayer",
+    "Method": "DeletePlayerAsync",
     "RelativePath": "api/FootballPlayers/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -186,7 +196,7 @@
   },
   {
     "ContainingType": "Praksa.WebApi.Controllers.FootballPlayersController",
-    "Method": "GetPlayersByClubId",
+    "Method": "GetPlayersByClubIdAsync",
     "RelativePath": "api/FootballPlayers/byClub/{clubId}",
     "HttpMethod": "GET",
     "IsController": true,

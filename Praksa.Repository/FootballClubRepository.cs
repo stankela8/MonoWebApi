@@ -5,7 +5,7 @@ namespace Praksa.Repository
 {
     public class FootballClubRepository
     {
-        public List<FootballClub> GetAll(FootballClubFilter filter)
+        public async Task<List<FootballClub>> GetAllAsync(FootballClubFilter filter)
         {
             var clubs = new List<FootballClub>();
             var db = new DatabaseHelper();
@@ -20,10 +20,16 @@ namespace Praksa.Repository
             using var command = new NpgsqlCommand();
             command.Connection = connection;
 
+            if (!string.IsNullOrWhiteSpace(filter.Name))
+            {
+                query += @" AND ""Name"" ILIKE @name";
+                command.Parameters.AddWithValue("@name", $"%{filter.Name}%");
+            }
+
             if (!string.IsNullOrWhiteSpace(filter.Country))
             {
-                query += @" AND LOWER(""Country"") = LOWER(@country)";
-                command.Parameters.AddWithValue("@country", filter.Country);
+                query += @" AND ""Country"" ILIKE @country";
+                command.Parameters.AddWithValue("@country", $"%{filter.Country}%");
             }
 
             if (filter.FoundedAfter.HasValue)
@@ -35,8 +41,8 @@ namespace Praksa.Repository
             query += @" ORDER BY ""Id""";
             command.CommandText = query;
 
-            using var reader = command.ExecuteReader();
-            while (reader.Read())
+            using var reader = await command.ExecuteReaderAsync();
+            while (await reader.ReadAsync())
             {
                 clubs.Add(new FootballClub
                 {
@@ -50,7 +56,7 @@ namespace Praksa.Repository
             return clubs;
         }
 
-        public FootballClub? GetById(int id)
+        public async Task<FootballClub?> GetByIdAsync(int id)
         {
             var db = new DatabaseHelper();
 
@@ -64,8 +70,8 @@ namespace Praksa.Repository
             using var command = new NpgsqlCommand(query, connection);
             command.Parameters.AddWithValue("@id", id);
 
-            using var reader = command.ExecuteReader();
-            if (reader.Read())
+            using var reader = await command.ExecuteReaderAsync();
+            if (await reader.ReadAsync())
             {
                 return new FootballClub
                 {
@@ -79,7 +85,21 @@ namespace Praksa.Repository
             return null;
         }
 
-        public void Insert(FootballClub club)
+        public async Task<int> GetNextIdAsync()
+        {
+            var db = new DatabaseHelper();
+
+            using var connection = db.GetConnection();
+            connection.Open();
+
+            var query = @"SELECT COALESCE(MAX(""Id""), 0) + 1 FROM ""FootballClub""";
+            using var command = new NpgsqlCommand(query, connection);
+
+            var result = await command.ExecuteScalarAsync();
+            return Convert.ToInt32(result);
+        }
+
+        public async Task<FootballClub> InsertAsync(FootballClub club)
         {
             var db = new DatabaseHelper();
 
@@ -95,11 +115,16 @@ namespace Praksa.Repository
             command.Parameters.AddWithValue("@country", club.Country);
             command.Parameters.AddWithValue("@foundedYear", club.FoundedYear);
 
-            command.ExecuteNonQuery();
+            await command.ExecuteNonQueryAsync();
+            return club;
         }
 
-        public bool Update(int id, FootballClub club)
+        public async Task<FootballClub?> UpdateAsync(int id, FootballClub club)
         {
+            var existing = await GetByIdAsync(id);
+            if (existing == null)
+                return null;
+
             var db = new DatabaseHelper();
 
             using var connection = db.GetConnection();
@@ -117,10 +142,13 @@ namespace Praksa.Repository
             command.Parameters.AddWithValue("@country", club.Country);
             command.Parameters.AddWithValue("@foundedYear", club.FoundedYear);
 
-            return command.ExecuteNonQuery() > 0;
+            await command.ExecuteNonQueryAsync();
+
+            club.Id = id;
+            return club;
         }
 
-        public bool Delete(int id)
+        public async Task<bool> DeleteAsync(int id)
         {
             var db = new DatabaseHelper();
 
@@ -132,20 +160,7 @@ namespace Praksa.Repository
             using var command = new NpgsqlCommand(query, connection);
             command.Parameters.AddWithValue("@id", id);
 
-            return command.ExecuteNonQuery() > 0;
-        }
-
-        public int GetNextId()
-        {
-            var db = new DatabaseHelper();
-
-            using var connection = db.GetConnection();
-            connection.Open();
-
-            var query = @"SELECT COALESCE(MAX(""Id""), 0) + 1 FROM ""FootballClub""";
-
-            using var command = new NpgsqlCommand(query, connection);
-            return Convert.ToInt32(command.ExecuteScalar());
+            return await command.ExecuteNonQueryAsync() > 0;
         }
     }
 }

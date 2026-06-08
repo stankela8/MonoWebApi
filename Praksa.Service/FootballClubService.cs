@@ -5,36 +5,35 @@ namespace Praksa.Service
 {
     public class FootballClubService
     {
-        public List<FootballClub> GetAllClubs(FootballClubFilter filter)
+        public async Task<List<FootballClub>> GetAllClubsAsync(FootballClubFilter filter)
         {
             var repo = new FootballClubRepository();
-            return repo.GetAll(filter);
+            return await repo.GetAllAsync(filter);
         }
 
-        public FootballClub? GetClubById(int id)
+        public async Task<FootballClub?> GetClubByIdAsync(int id)
         {
             var repo = new FootballClubRepository();
-            return repo.GetById(id);
+            return await repo.GetByIdAsync(id);
         }
 
-        public FootballClub AddClub(FootballClub club)
+        public async Task<FootballClub> AddClubAsync(FootballClub club)
         {
             var repo = new FootballClubRepository();
-            club.Id = repo.GetNextId();
-            repo.Insert(club);
-            return club;
+            club.Id = await repo.GetNextIdAsync();
+            return await repo.InsertAsync(club);
         }
 
-        public bool UpdateClub(int id, FootballClub club)
+        public async Task<FootballClub?> UpdateClubAsync(int id, FootballClub club)
         {
             var repo = new FootballClubRepository();
-            return repo.Update(id, club);
+            return await repo.UpdateAsync(id, club);
         }
 
-        public bool DeleteClub(int id)
+        public async Task<bool> DeleteClubAsync(int id)
         {
             var repo = new FootballClubRepository();
-            return repo.Delete(id);
+            return await repo.DeleteAsync(id);
         }
     }
 }

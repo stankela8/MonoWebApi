@@ -12,6 +12,13 @@
         ],
         "parameters": [
           {
+            "name": "Name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "Country",
             "in": "query",
             "schema": {
@@ -153,6 +160,13 @@
           "FootballPlayers"
         ],
         "parameters": [
+          {
+            "name": "Name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "name": "Position",
             "in": "query",

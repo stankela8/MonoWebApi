@@ -5,7 +5,7 @@ namespace Praksa.Repository
 {
     public class FootballPlayerRepository
     {
-        public List<FootballPlayer> GetAll(FootballPlayerFilter filter)
+        public async Task<List<FootballPlayer>> GetAllAsync(FootballPlayerFilter filter)
         {
             var players = new List<FootballPlayer>();
             var db = new DatabaseHelper();
@@ -20,10 +20,16 @@ namespace Praksa.Repository
             using var command = new NpgsqlCommand();
             command.Connection = connection;
 
+            if (!string.IsNullOrWhiteSpace(filter.Name))
+            {
+                query += @" AND ""Name"" ILIKE @name";
+                command.Parameters.AddWithValue("@name", $"%{filter.Name}%");
+            }
+
             if (!string.IsNullOrWhiteSpace(filter.Position))
             {
-                query += @" AND LOWER(""Position"") = LOWER(@position)";
-                command.Parameters.AddWithValue("@position", filter.Position);
+                query += @" AND ""Position"" ILIKE @position";
+                command.Parameters.AddWithValue("@position", $"%{filter.Position}%");
             }
 
             if (filter.MinValue.HasValue)
@@ -41,8 +47,8 @@ namespace Praksa.Repository
             query += @" ORDER BY ""Id""";
             command.CommandText = query;
 
-            using var reader = command.ExecuteReader();
-            while (reader.Read())
+            using var reader = await command.ExecuteReaderAsync();
+            while (await reader.ReadAsync())
             {
                 players.Add(new FootballPlayer
                 {
@@ -58,7 +64,7 @@ namespace Praksa.Repository
             return players;
         }
 
-        public FootballPlayer? GetById(int id)
+        public async Task<FootballPlayer?> GetByIdAsync(int id)
         {
             var db = new DatabaseHelper();
 
@@ -72,8 +78,8 @@ namespace Praksa.Repository
             using var command = new NpgsqlCommand(query, connection);
             command.Parameters.AddWithValue("@id", id);
 
-            using var reader = command.ExecuteReader();
-            if (reader.Read())
+            using var reader = await command.ExecuteReaderAsync();
+            if (await reader.ReadAsync())
             {
                 return new FootballPlayer
                 {
@@ -89,7 +95,7 @@ namespace Praksa.Repository
             return null;
         }
 
-        public List<FootballPlayer> GetByClubId(int clubId)
+        public async Task<List<FootballPlayer>> GetByClubIdAsync(int clubId)
         {
             var players = new List<FootballPlayer>();
             var db = new DatabaseHelper();
@@ -98,15 +104,15 @@ namespace Praksa.Repository
             connection.Open();
 
             var query = @"SELECT ""Id"", ""Name"", ""ClubId"", ""JerseyNumber"", ""Position"", ""MarketValue""
-                  FROM ""FootballPlayer""
-                  WHERE ""ClubId"" = @clubId
-                  ORDER BY ""Id""";
+                          FROM ""FootballPlayer""
+                          WHERE ""ClubId"" = @clubId
+                          ORDER BY ""Id""";
 
             using var command = new NpgsqlCommand(query, connection);
             command.Parameters.AddWithValue("@clubId", clubId);
 
-            using var reader = command.ExecuteReader();
-            while (reader.Read())
+            using var reader = await command.ExecuteReaderAsync();
+            while (await reader.ReadAsync())
             {
                 players.Add(new FootballPlayer
                 {
@@ -122,14 +128,29 @@ namespace Praksa.Repository
             return players;
         }
 
-        public void Insert(FootballPlayer player)
+        public async Task<int> GetNextIdAsync()
         {
             var db = new DatabaseHelper();
 
             using var connection = db.GetConnection();
             connection.Open();
 
-            var query = @"INSERT INTO ""FootballPlayer"" (""Id"", ""Name"", ""ClubId"", ""JerseyNumber"", ""Position"", ""MarketValue"")
+            var query = @"SELECT COALESCE(MAX(""Id""), 0) + 1 FROM ""FootballPlayer""";
+            using var command = new NpgsqlCommand(query, connection);
+
+            var result = await command.ExecuteScalarAsync();
+            return Convert.ToInt32(result);
+        }
+
+        public async Task<FootballPlayer> InsertAsync(FootballPlayer player)
+        {
+            var db = new DatabaseHelper();
+
+            using var connection = db.GetConnection();
+            connection.Open();
+
+            var query = @"INSERT INTO ""FootballPlayer""
+                          (""Id"", ""Name"", ""ClubId"", ""JerseyNumber"", ""Position"", ""MarketValue"")
                           VALUES (@id, @name, @clubId, @jerseyNumber, @position, @marketValue)";
 
             using var command = new NpgsqlCommand(query, connection);
@@ -140,11 +161,16 @@ namespace Praksa.Repository
             command.Parameters.AddWithValue("@position", player.Position);
             command.Parameters.AddWithValue("@marketValue", player.MarketValue);
 
-            command.ExecuteNonQuery();
+            await command.ExecuteNonQueryAsync();
+            return player;
         }
 
-        public bool Update(int id, FootballPlayer player)
+        public async Task<FootballPlayer?> UpdateAsync(int id, FootballPlayer player)
         {
+            var existing = await GetByIdAsync(id);
+            if (existing == null)
+                return null;
+
             var db = new DatabaseHelper();
 
             using var connection = db.GetConnection();
@@ -166,10 +192,13 @@ namespace Praksa.Repository
             command.Parameters.AddWithValue("@position", player.Position);
             command.Parameters.AddWithValue("@marketValue", player.MarketValue);
 
-            return command.ExecuteNonQuery() > 0;
+            await command.ExecuteNonQueryAsync();
+
+            player.Id = id;
+            return player;
         }
 
-        public bool Delete(int id)
+        public async Task<bool> DeleteAsync(int id)
         {
             var db = new DatabaseHelper();
 
@@ -181,20 +210,7 @@ namespace Praksa.Repository
             using var command = new NpgsqlCommand(query, connection);
             command.Parameters.AddWithValue("@id", id);
 
-            return command.ExecuteNonQuery() > 0;
-        }
-
-        public int GetNextId()
-        {
-            var db = new DatabaseHelper();
-
-            using var connection = db.GetConnection();
-            connection.Open();
-
-            var query = @"SELECT COALESCE(MAX(""Id""), 0) + 1 FROM ""FootballPlayer""";
-
-            using var command = new NpgsqlCommand(query, connection);
-            return Convert.ToInt32(command.ExecuteScalar());
+            return await command.ExecuteNonQueryAsync() > 0;
         }
     }
 }

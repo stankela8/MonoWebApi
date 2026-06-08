@@ -9,70 +9,59 @@ namespace Praksa.WebApi.Controllers
     public class FootballClubsController : ControllerBase
     {
         [HttpGet]
-        public IActionResult GetAllClubs([FromQuery] FootballClubFilter filter)
+        public async Task<IActionResult> GetAllClubsAsync([FromQuery] FootballClubFilter filter)
         {
             var service = new FootballClubService();
-            var clubs = service.GetAllClubs(filter);
+            var clubs = await service.GetAllClubsAsync(filter);
             return Ok(clubs);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetClubById(int id)
+        public async Task<IActionResult> GetClubByIdAsync(int id)
         {
             var service = new FootballClubService();
-            var club = service.GetClubById(id);
+            var club = await service.GetClubByIdAsync(id);
 
             if (club == null)
-            {
                 return NotFound("Club not found.");
-            }
 
             return Ok(club);
         }
 
         [HttpPost]
-        public IActionResult AddClub([FromBody] FootballClub newClub)
+        public async Task<IActionResult> AddClubAsync([FromBody] FootballClub club)
         {
-            if (newClub == null)
-            {
+            if (club == null)
                 return BadRequest("Club data is required.");
-            }
 
             var service = new FootballClubService();
-            var createdClub = service.AddClub(newClub);
-
+            var createdClub = await service.AddClubAsync(club);
             return Ok(createdClub);
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateClub(int id, [FromBody] FootballClub updatedClub)
+        public async Task<IActionResult> UpdateClubAsync(int id, [FromBody] FootballClub club)
         {
-            if (updatedClub == null)
-            {
+            if (club == null)
                 return BadRequest("Updated club data is required.");
-            }
 
             var service = new FootballClubService();
-            var success = service.UpdateClub(id, updatedClub);
+            var updatedClub = await service.UpdateClubAsync(id, club);
 
-            if (!success)
-            {
+            if (updatedClub == null)
                 return NotFound("Club not found.");
-            }
 
             return Ok(updatedClub);
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteClub(int id)
+        public async Task<IActionResult> DeleteClubAsync(int id)
         {
             var service = new FootballClubService();
-            var success = service.DeleteClub(id);
+            var deleted = await service.DeleteClubAsync(id);
 
-            if (!success)
-            {
+            if (!deleted)
                 return NotFound("Club not found.");
-            }
 
             return Ok("Club deleted successfully.");
         }
