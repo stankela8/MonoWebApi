@@ -3,7 +3,7 @@ using Praksa.Repository;
 
 namespace Praksa.Service
 {
-    public class FootballClubService
+    public class FootballClubService : IFootballClubService
     {
         public async Task<List<FootballClub>> GetAllClubsAsync(FootballClubFilter filter)
         {

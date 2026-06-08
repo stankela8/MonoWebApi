@@ -1,9 +1,10 @@
 ﻿using Npgsql;
 using Praksa.Common;
 
+
 namespace Praksa.Repository
 {
-    public class FootballPlayerRepository
+    public class FootballPlayerRepository:IFootballPlayerRepository
     {
         public async Task<List<FootballPlayer>> GetAllAsync(FootballPlayerFilter filter)
         {
