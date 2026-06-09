@@ -22,6 +22,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Praksa.Repository", "Praksa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Praksa.Common", "Praksa.Common\Praksa.Common.csproj", "{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Praksa.Repository.Common", "Praksa.Repository.Common\Praksa.Repository.Common.csproj", "{2D5F2626-66CA-40A5-86F7-52785A5E01DB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0} = {4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Praksa.Service.Common", "Praksa.Service.Common\Praksa.Service.Common.csproj", "{24DD3EB0-A4A2-4091-85CA-7BDB1CAA073D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +51,14 @@ Global
 		{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D5F2626-66CA-40A5-86F7-52785A5E01DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D5F2626-66CA-40A5-86F7-52785A5E01DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D5F2626-66CA-40A5-86F7-52785A5E01DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D5F2626-66CA-40A5-86F7-52785A5E01DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24DD3EB0-A4A2-4091-85CA-7BDB1CAA073D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24DD3EB0-A4A2-4091-85CA-7BDB1CAA073D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24DD3EB0-A4A2-4091-85CA-7BDB1CAA073D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24DD3EB0-A4A2-4091-85CA-7BDB1CAA073D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

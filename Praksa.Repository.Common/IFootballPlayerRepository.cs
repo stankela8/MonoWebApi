@@ -1,4 +1,6 @@
-﻿namespace Praksa.Common
+﻿using Praksa.Common;
+
+namespace Praksa.Repository.Common
 {
     public interface IFootballPlayerRepository
     {

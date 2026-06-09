@@ -14,3 +14,5 @@ C:\Users\Luka\source\repos\Praksa\Praksa.Repository\obj\Debug\net8.0\Praksa.Repo
 C:\Users\Luka\source\repos\Praksa\Praksa.Repository\obj\Debug\net8.0\refint\Praksa.Repository.dll
 C:\Users\Luka\source\repos\Praksa\Praksa.Repository\obj\Debug\net8.0\Praksa.Repository.pdb
 C:\Users\Luka\source\repos\Praksa\Praksa.Repository\obj\Debug\net8.0\ref\Praksa.Repository.dll
+C:\Users\Luka\source\repos\Praksa\Praksa.Repository\bin\Debug\net8.0\Praksa.Repository.Common.dll
+C:\Users\Luka\source\repos\Praksa\Praksa.Repository\bin\Debug\net8.0\Praksa.Repository.Common.pdb

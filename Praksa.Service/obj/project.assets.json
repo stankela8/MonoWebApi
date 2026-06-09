@@ -11,6 +11,32 @@
         "runtime": {
           "bin/placeholder/Praksa.Common.dll": {}
         }
+      },
+      "Praksa.Repository.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Praksa.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Praksa.Repository.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Praksa.Repository.Common.dll": {}
+        }
+      },
+      "Praksa.Service.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Praksa.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Praksa.Service.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Praksa.Service.Common.dll": {}
+        }
       }
     }
   },
@@ -19,11 +45,23 @@
       "type": "project",
       "path": "../Praksa.Common/Praksa.Common.csproj",
       "msbuildProject": "../Praksa.Common/Praksa.Common.csproj"
+    },
+    "Praksa.Repository.Common/1.0.0": {
+      "type": "project",
+      "path": "../Praksa.Repository.Common/Praksa.Repository.Common.csproj",
+      "msbuildProject": "../Praksa.Repository.Common/Praksa.Repository.Common.csproj"
+    },
+    "Praksa.Service.Common/1.0.0": {
+      "type": "project",
+      "path": "../Praksa.Service.Common/Praksa.Service.Common.csproj",
+      "msbuildProject": "../Praksa.Service.Common/Praksa.Service.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Praksa.Common >= 1.0.0"
+      "Praksa.Common >= 1.0.0",
+      "Praksa.Repository.Common >= 1.0.0",
+      "Praksa.Service.Common >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -60,6 +98,12 @@
           "projectReferences": {
             "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Common\\Praksa.Common.csproj": {
               "projectPath": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Common\\Praksa.Common.csproj"
+            },
+            "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Repository.Common\\Praksa.Repository.Common.csproj": {
+              "projectPath": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Repository.Common\\Praksa.Repository.Common.csproj"
+            },
+            "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Service.Common\\Praksa.Service.Common.csproj": {
+              "projectPath": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Service.Common\\Praksa.Service.Common.csproj"
             }
           }
         }

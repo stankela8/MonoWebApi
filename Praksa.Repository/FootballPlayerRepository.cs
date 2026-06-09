@@ -1,6 +1,6 @@
 ﻿using Npgsql;
 using Praksa.Common;
-
+using Praksa.Repository.Common;
 
 namespace Praksa.Repository
 {

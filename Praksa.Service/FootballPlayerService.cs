@@ -1,4 +1,6 @@
 ﻿using Praksa.Common;
+using Praksa.Service.Common;
+using Praksa.Repository.Common;
 
 namespace Praksa.Service
 {

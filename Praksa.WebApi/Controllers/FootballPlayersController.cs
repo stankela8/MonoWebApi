@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Praksa.Common;
-using Praksa.Service;
+using Praksa.Service.Common;
 
 namespace Praksa.WebApi.Controllers
 {

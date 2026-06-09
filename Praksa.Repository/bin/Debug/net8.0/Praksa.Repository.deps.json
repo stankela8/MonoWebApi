@@ -9,7 +9,8 @@
       "Praksa.Repository/1.0.0": {
         "dependencies": {
           "Npgsql": "10.0.3",
-          "Praksa.Common": "1.0.0"
+          "Praksa.Common": "1.0.0",
+          "Praksa.Repository.Common": "1.0.0"
         },
         "runtime": {
           "Praksa.Repository.dll": {}
@@ -61,6 +62,17 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "Praksa.Repository.Common/1.0.0": {
+        "dependencies": {
+          "Praksa.Common": "1.0.0"
+        },
+        "runtime": {
+          "Praksa.Repository.Common.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -99,6 +111,11 @@
       "hashPath": "system.diagnostics.diagnosticsource.9.0.11.nupkg.sha512"
     },
     "Praksa.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Praksa.Repository.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

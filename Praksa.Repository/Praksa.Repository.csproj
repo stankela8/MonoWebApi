@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Praksa.Common\Praksa.Common.csproj" />
+    <ProjectReference Include="..\Praksa.Repository.Common\Praksa.Repository.Common.csproj" />
   </ItemGroup>
 
 </Project>

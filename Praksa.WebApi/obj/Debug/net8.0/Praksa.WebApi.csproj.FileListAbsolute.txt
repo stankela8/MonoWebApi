@@ -43,3 +43,9 @@ C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\obj\Debug\net8.0\Praksa.WebApi.p
 C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\obj\Debug\net8.0\Praksa.WebApi.genruntimeconfig.cache
 C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\obj\Debug\net8.0\ref\Praksa.WebApi.dll
 C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\bin\Debug\net8.0\Autofac.dll
+C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\bin\Debug\net8.0\Autofac.Extensions.DependencyInjection.dll
+C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\bin\Debug\net8.0\Praksa.Repository.Common.dll
+C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\bin\Debug\net8.0\Praksa.Service.Common.dll
+C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\bin\Debug\net8.0\Praksa.Repository.Common.pdb
+C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\bin\Debug\net8.0\Praksa.Service.Common.pdb

@@ -9,9 +9,12 @@
       "Praksa.WebApi/1.0.0": {
         "dependencies": {
           "Autofac": "9.1.0",
+          "Autofac.Extensions.DependencyInjection": "11.0.0",
           "Praksa.Common": "1.0.0",
           "Praksa.Repository": "1.0.0",
+          "Praksa.Repository.Common": "1.0.0",
           "Praksa.Service": "1.0.0",
+          "Praksa.Service.Common": "1.0.0",
           "Swashbuckle.AspNetCore": "10.2.1"
         },
         "runtime": {
@@ -29,11 +32,30 @@
           }
         }
       },
+      "Autofac.Extensions.DependencyInjection/11.0.0": {
+        "dependencies": {
+          "Autofac": "9.1.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.4"
+        },
+        "runtime": {
+          "lib/net8.0/Autofac.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.0.0"
+          }
+        }
+      },
       "Microsoft.Extensions.ApiDescription.Server/8.0.0": {},
-      "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {},
+      "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.4": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.426.12010"
+          }
+        }
+      },
       "Microsoft.Extensions.Logging.Abstractions/8.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.4"
         }
       },
       "Microsoft.OpenApi/2.7.5": {
@@ -117,7 +139,8 @@
       "Praksa.Repository/1.0.0": {
         "dependencies": {
           "Npgsql": "10.0.3",
-          "Praksa.Common": "1.0.0"
+          "Praksa.Common": "1.0.0",
+          "Praksa.Repository.Common": "1.0.0"
         },
         "runtime": {
           "Praksa.Repository.dll": {
@@ -126,12 +149,36 @@
           }
         }
       },
-      "Praksa.Service/1.0.0": {
+      "Praksa.Repository.Common/1.0.0": {
         "dependencies": {
           "Praksa.Common": "1.0.0"
         },
         "runtime": {
+          "Praksa.Repository.Common.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Praksa.Service/1.0.0": {
+        "dependencies": {
+          "Praksa.Common": "1.0.0",
+          "Praksa.Repository.Common": "1.0.0",
+          "Praksa.Service.Common": "1.0.0"
+        },
+        "runtime": {
           "Praksa.Service.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Praksa.Service.Common/1.0.0": {
+        "dependencies": {
+          "Praksa.Common": "1.0.0"
+        },
+        "runtime": {
+          "Praksa.Service.Common.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -152,6 +199,13 @@
       "path": "autofac/9.1.0",
       "hashPath": "autofac.9.1.0.nupkg.sha512"
     },
+    "Autofac.Extensions.DependencyInjection/11.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/FSrJyYEsptkV9O3L95dTAoGO6XGSQFDENWHFcHxW0oQIEvW56Mgr01qO53EIEIDDvMFqszBU+uIm9fzGARLPQ==",
+      "path": "autofac.extensions.dependencyinjection/11.0.0",
+      "hashPath": "autofac.extensions.dependencyinjection.11.0.0.nupkg.sha512"
+    },
     "Microsoft.Extensions.ApiDescription.Server/8.0.0": {
       "type": "package",
       "serviceable": true,
@@ -159,12 +213,12 @@
       "path": "microsoft.extensions.apidescription.server/8.0.0",
       "hashPath": "microsoft.extensions.apidescription.server.8.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
+    "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-cjWrLkJXK0rs4zofsK4bSdg+jhDLTaxrkXu4gS6Y7MAlCvRyNNgwY/lJi5RDlQOnSZweHqoyvgvbdvQsRIW+hg==",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.0",
-      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+      "sha512": "sha512-SIe9zlVQJecnk/DTmevIcl6+aEDYhoVLc2eG2AKwVeNEC8CSyxHAbh4lf0xtHq9JUum0vVTEByGNTK+b6oihTQ==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/10.0.4",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.10.0.4.nupkg.sha512"
     },
     "Microsoft.Extensions.Logging.Abstractions/8.0.0": {
       "type": "package",
@@ -239,7 +293,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Praksa.Repository.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Praksa.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Praksa.Service.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
