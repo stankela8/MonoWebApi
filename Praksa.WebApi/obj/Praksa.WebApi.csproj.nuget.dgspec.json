@@ -174,9 +174,6 @@
             "projectReferences": {
               "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Common\\Praksa.Common.csproj": {
                 "projectPath": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Common\\Praksa.Common.csproj"
-              },
-              "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Repository\\Praksa.Repository.csproj": {
-                "projectPath": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Repository\\Praksa.Repository.csproj"
               }
             }
           }
@@ -247,6 +244,9 @@
               "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Common\\Praksa.Common.csproj": {
                 "projectPath": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Common\\Praksa.Common.csproj"
               },
+              "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Repository\\Praksa.Repository.csproj": {
+                "projectPath": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Repository\\Praksa.Repository.csproj"
+              },
               "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Service\\Praksa.Service.csproj": {
                 "projectPath": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Service\\Praksa.Service.csproj"
               }
@@ -269,9 +269,13 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[9.1.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.6.2, )"
+              "version": "[10.2.1, )"
             }
           },
           "imports": [

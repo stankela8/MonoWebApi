@@ -7,11 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="Autofac" Version="9.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Praksa.Common\Praksa.Common.csproj" />
+    <ProjectReference Include="..\Praksa.Repository\Praksa.Repository.csproj" />
     <ProjectReference Include="..\Praksa.Service\Praksa.Service.csproj" />
   </ItemGroup>
 

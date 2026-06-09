@@ -8,19 +8,25 @@ namespace Praksa.WebApi.Controllers
     [Route("api/[controller]")]
     public class FootballClubsController : ControllerBase
     {
+        private readonly IFootballClubService _service;
+        public FootballClubsController(IFootballClubService service)
+        {
+            _service = service;
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetAllClubsAsync([FromQuery] FootballClubFilter filter)
         {
-            var service = new FootballClubService();
-            var clubs = await service.GetAllClubsAsync(filter);
+           
+            var clubs = await _service.GetAllClubsAsync(filter);
             return Ok(clubs);
         }
-
+        
         [HttpGet("{id}")]
         public async Task<IActionResult> GetClubByIdAsync(int id)
         {
-            var service = new FootballClubService();
-            var club = await service.GetClubByIdAsync(id);
+           
+            var club = await _service.GetClubByIdAsync(id);
 
             if (club == null)
                 return NotFound("Club not found.");
@@ -34,8 +40,8 @@ namespace Praksa.WebApi.Controllers
             if (club == null)
                 return BadRequest("Club data is required.");
 
-            var service = new FootballClubService();
-            var createdClub = await service.AddClubAsync(club);
+           
+            var createdClub = await _service.AddClubAsync(club);
             return Ok(createdClub);
         }
 
@@ -45,8 +51,8 @@ namespace Praksa.WebApi.Controllers
             if (club == null)
                 return BadRequest("Updated club data is required.");
 
-            var service = new FootballClubService();
-            var updatedClub = await service.UpdateClubAsync(id, club);
+            
+            var updatedClub = await _service.UpdateClubAsync(id, club);
 
             if (updatedClub == null)
                 return NotFound("Club not found.");
@@ -56,9 +62,8 @@ namespace Praksa.WebApi.Controllers
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteClubAsync(int id)
-        {
-            var service = new FootballClubService();
-            var deleted = await service.DeleteClubAsync(id);
+        { 
+            var deleted = await _service.DeleteClubAsync(id);
 
             if (!deleted)
                 return NotFound("Club not found.");

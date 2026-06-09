@@ -1,6 +1,4 @@
-﻿using Praksa.Common;
-
-namespace Praksa.Service
+﻿namespace Praksa.Common
 {
     public interface IFootballPlayerService
     {

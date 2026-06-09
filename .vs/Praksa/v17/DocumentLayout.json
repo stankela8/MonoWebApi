@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Luka\\source\\repos\\Praksa\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F21829C5-1583-4491-8FB0-BED84DF233AB}|Praksa.Repository\\Praksa.Repository.csproj|c:\\users\\luka\\source\\repos\\praksa\\praksa.repository\\footballclubrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F21829C5-1583-4491-8FB0-BED84DF233AB}|Praksa.Repository\\Praksa.Repository.csproj|solutionrelative:praksa.repository\\footballclubrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}|Praksa.Common\\Praksa.Common.csproj|c:\\users\\luka\\source\\repos\\praksa\\praksa.common\\ifootballplayerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}|Praksa.Common\\Praksa.Common.csproj|solutionrelative:praksa.common\\ifootballplayerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F21829C5-1583-4491-8FB0-BED84DF233AB}|Praksa.Repository\\Praksa.Repository.csproj|c:\\users\\luka\\source\\repos\\praksa\\praksa.repository\\footballplayerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F21829C5-1583-4491-8FB0-BED84DF233AB}|Praksa.Repository\\Praksa.Repository.csproj|solutionrelative:praksa.repository\\footballplayerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}|Praksa.Common\\Praksa.Common.csproj|c:\\users\\luka\\source\\repos\\praksa\\praksa.common\\ifootballplayerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}|Praksa.Common\\Praksa.Common.csproj|solutionrelative:praksa.common\\ifootballplayerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F21829C5-1583-4491-8FB0-BED84DF233AB}|Praksa.Repository\\Praksa.Repository.csproj|c:\\users\\luka\\source\\repos\\praksa\\praksa.repository\\ifootballplayerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F21829C5-1583-4491-8FB0-BED84DF233AB}|Praksa.Repository\\Praksa.Repository.csproj|solutionrelative:praksa.repository\\ifootballplayerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}|Praksa.Common\\Praksa.Common.csproj|c:\\users\\luka\\source\\repos\\praksa\\praksa.common\\ifootballclubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}|Praksa.Common\\Praksa.Common.csproj|solutionrelative:praksa.common\\ifootballclubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F21829C5-1583-4491-8FB0-BED84DF233AB}|Praksa.Repository\\Praksa.Repository.csproj|c:\\users\\luka\\source\\repos\\praksa\\praksa.repository\\ifootballclubrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F21829C5-1583-4491-8FB0-BED84DF233AB}|Praksa.Repository\\Praksa.Repository.csproj|solutionrelative:praksa.repository\\ifootballclubrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}|Praksa.Common\\Praksa.Common.csproj|c:\\users\\luka\\source\\repos\\praksa\\praksa.common\\ifootballclubrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}|Praksa.Common\\Praksa.Common.csproj|solutionrelative:praksa.common\\ifootballclubrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{517CE90B-25E9-4A96-847C-A33FB1EAAF0F}|Praksa.WebApi\\Praksa.WebApi.csproj|c:\\users\\luka\\source\\repos\\praksa\\praksa.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{517CE90B-25E9-4A96-847C-A33FB1EAAF0F}|Praksa.WebApi\\Praksa.WebApi.csproj|solutionrelative:praksa.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB88C021-C15D-4243-B68C-E23D67CAFFEC}|Praksa.Service\\Praksa.Service.csproj|c:\\users\\luka\\source\\repos\\praksa\\praksa.service\\footballplayerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,12 +31,24 @@
       "RelativeMoniker": "D:0:0:{FB88C021-C15D-4243-B68C-E23D67CAFFEC}|Praksa.Service\\Praksa.Service.csproj|solutionrelative:praksa.service\\footballclubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB88C021-C15D-4243-B68C-E23D67CAFFEC}|Praksa.Service\\Praksa.Service.csproj|c:\\users\\luka\\source\\repos\\praksa\\praksa.service\\ifootballplayerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB88C021-C15D-4243-B68C-E23D67CAFFEC}|Praksa.Service\\Praksa.Service.csproj|solutionrelative:praksa.service\\ifootballplayerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F21829C5-1583-4491-8FB0-BED84DF233AB}|Praksa.Repository\\Praksa.Repository.csproj|c:\\users\\luka\\source\\repos\\praksa\\praksa.repository\\footballplayerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F21829C5-1583-4491-8FB0-BED84DF233AB}|Praksa.Repository\\Praksa.Repository.csproj|solutionrelative:praksa.repository\\footballplayerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB88C021-C15D-4243-B68C-E23D67CAFFEC}|Praksa.Service\\Praksa.Service.csproj|c:\\users\\luka\\source\\repos\\praksa\\praksa.service\\ifootballclubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB88C021-C15D-4243-B68C-E23D67CAFFEC}|Praksa.Service\\Praksa.Service.csproj|solutionrelative:praksa.service\\ifootballclubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F21829C5-1583-4491-8FB0-BED84DF233AB}|Praksa.Repository\\Praksa.Repository.csproj|c:\\users\\luka\\source\\repos\\praksa\\praksa.repository\\footballclubrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F21829C5-1583-4491-8FB0-BED84DF233AB}|Praksa.Repository\\Praksa.Repository.csproj|solutionrelative:praksa.repository\\footballclubrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}|Praksa.Common\\Praksa.Common.csproj|c:\\users\\luka\\source\\repos\\praksa\\praksa.common\\praksa.common.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}|Praksa.Common\\Praksa.Common.csproj|solutionrelative:praksa.common\\praksa.common.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}|Praksa.Common\\Praksa.Common.csproj|c:\\users\\luka\\source\\repos\\praksa\\praksa.common\\footballclub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}|Praksa.Common\\Praksa.Common.csproj|solutionrelative:praksa.common\\footballclub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}|Praksa.Common\\Praksa.Common.csproj|c:\\users\\luka\\source\\repos\\praksa\\praksa.common\\footballplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}|Praksa.Common\\Praksa.Common.csproj|solutionrelative:praksa.common\\footballplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}|Praksa.Common\\Praksa.Common.csproj|c:\\users\\luka\\source\\repos\\praksa\\praksa.common\\footballplayerfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,6 +57,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}|Praksa.Common\\Praksa.Common.csproj|c:\\users\\luka\\source\\repos\\praksa\\praksa.common\\footballclubfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4350EC6A-3DE0-4C8D-8654-B60B6C87FDF0}|Praksa.Common\\Praksa.Common.csproj|solutionrelative:praksa.common\\footballclubfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F21829C5-1583-4491-8FB0-BED84DF233AB}|Praksa.Repository\\Praksa.Repository.csproj|c:\\users\\luka\\source\\repos\\praksa\\praksa.repository\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F21829C5-1583-4491-8FB0-BED84DF233AB}|Praksa.Repository\\Praksa.Repository.csproj|solutionrelative:praksa.repository\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{517CE90B-25E9-4A96-847C-A33FB1EAAF0F}|Praksa.WebApi\\Praksa.WebApi.csproj|c:\\users\\luka\\source\\repos\\praksa\\praksa.webapi\\controllers\\footballplayerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,115 +78,193 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "IFootballPlayerRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Repository\\IFootballPlayerRepository.cs",
-              "RelativeDocumentMoniker": "Praksa.Repository\\IFootballPlayerRepository.cs",
-              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Repository\\IFootballPlayerRepository.cs",
-              "RelativeToolTip": "Praksa.Repository\\IFootballPlayerRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
+              "Title": "IFootballClubService.cs",
+              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Common\\IFootballClubService.cs",
+              "RelativeDocumentMoniker": "Praksa.Common\\IFootballClubService.cs",
+              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Common\\IFootballClubService.cs",
+              "RelativeToolTip": "Praksa.Common\\IFootballClubService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T12:49:53.194Z",
+              "WhenOpened": "2026-06-09T10:17:06.602Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FootballPlayerService.cs",
-              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Service\\FootballPlayerService.cs",
-              "RelativeDocumentMoniker": "Praksa.Service\\FootballPlayerService.cs",
-              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Service\\FootballPlayerService.cs",
-              "RelativeToolTip": "Praksa.Service\\FootballPlayerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA/AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "IFootballPlayerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Common\\IFootballPlayerRepository.cs",
+              "RelativeDocumentMoniker": "Praksa.Common\\IFootballPlayerRepository.cs",
+              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Common\\IFootballPlayerRepository.cs",
+              "RelativeToolTip": "Praksa.Common\\IFootballPlayerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T12:11:15.741Z",
+              "WhenOpened": "2026-06-09T10:14:03.592Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "IFootballClubRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Repository\\IFootballClubRepository.cs",
-              "RelativeDocumentMoniker": "Praksa.Repository\\IFootballClubRepository.cs",
-              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Repository\\IFootballClubRepository.cs",
-              "RelativeToolTip": "Praksa.Repository\\IFootballClubRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Common\\IFootballClubRepository.cs",
+              "RelativeDocumentMoniker": "Praksa.Common\\IFootballClubRepository.cs",
+              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Common\\IFootballClubRepository.cs",
+              "RelativeToolTip": "Praksa.Common\\IFootballClubRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T12:49:09.386Z",
+              "WhenOpened": "2026-06-09T10:13:53.792Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FootballPlayerRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Repository\\FootballPlayerRepository.cs",
-              "RelativeDocumentMoniker": "Praksa.Repository\\FootballPlayerRepository.cs",
-              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Repository\\FootballPlayerRepository.cs",
-              "RelativeToolTip": "Praksa.Repository\\FootballPlayerRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "Praksa.Common",
+              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Common\\Praksa.Common.csproj",
+              "RelativeDocumentMoniker": "Praksa.Common\\Praksa.Common.csproj",
+              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Common\\Praksa.Common.csproj",
+              "RelativeToolTip": "Praksa.Common\\Praksa.Common.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-09T10:13:50.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "Praksa.WebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.WebApi\\Program.cs",
+              "RelativeToolTip": "Praksa.WebApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T12:08:39.194Z",
+              "WhenOpened": "2026-06-09T09:32:19.36Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "IFootballPlayerService.cs",
+              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Common\\IFootballPlayerService.cs",
+              "RelativeDocumentMoniker": "Praksa.Common\\IFootballPlayerService.cs",
+              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Common\\IFootballPlayerService.cs",
+              "RelativeToolTip": "Praksa.Common\\IFootballPlayerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T10:17:32.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FootballClubService.cs",
+              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Service\\FootballClubService.cs",
+              "RelativeDocumentMoniker": "Praksa.Service\\FootballClubService.cs",
+              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Service\\FootballClubService.cs",
+              "RelativeToolTip": "Praksa.Service\\FootballClubService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T10:14:50.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FootballPlayerService.cs",
+              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Service\\FootballPlayerService.cs",
+              "RelativeDocumentMoniker": "Praksa.Service\\FootballPlayerService.cs",
+              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Service\\FootballPlayerService.cs",
+              "RelativeToolTip": "Praksa.Service\\FootballPlayerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T09:23:13.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "FootballClubRepository.cs",
               "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Repository\\FootballClubRepository.cs",
               "RelativeDocumentMoniker": "Praksa.Repository\\FootballClubRepository.cs",
               "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Repository\\FootballClubRepository.cs",
               "RelativeToolTip": "Praksa.Repository\\FootballClubRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-08T07:32:57.302Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FootballClubService.cs",
-              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Service\\FootballClubService.cs",
-              "RelativeDocumentMoniker": "Praksa.Service\\FootballClubService.cs",
-              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Service\\FootballClubService.cs",
-              "RelativeToolTip": "Praksa.Service\\FootballClubService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T12:11:05.951Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IFootballPlayerService.cs",
-              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Service\\IFootballPlayerService.cs",
-              "RelativeDocumentMoniker": "Praksa.Service\\IFootballPlayerService.cs",
-              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Service\\IFootballPlayerService.cs",
-              "RelativeToolTip": "Praksa.Service\\IFootballPlayerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T12:50:39.094Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "IFootballClubService.cs",
-              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Service\\IFootballClubService.cs",
-              "RelativeDocumentMoniker": "Praksa.Service\\IFootballClubService.cs",
-              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Service\\IFootballClubService.cs",
-              "RelativeToolTip": "Praksa.Service\\IFootballClubService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAYAAAAAAAAAA==",
+              "Title": "FootballPlayerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Repository\\FootballPlayerRepository.cs",
+              "RelativeDocumentMoniker": "Praksa.Repository\\FootballPlayerRepository.cs",
+              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Repository\\FootballPlayerRepository.cs",
+              "RelativeToolTip": "Praksa.Repository\\FootballPlayerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T12:50:18.952Z",
+              "WhenOpened": "2026-06-09T09:26:33.96Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
+              "Title": "FootballPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Common\\FootballPlayer.cs",
+              "RelativeDocumentMoniker": "Praksa.Common\\FootballPlayer.cs",
+              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Common\\FootballPlayer.cs",
+              "RelativeToolTip": "Praksa.Common\\FootballPlayer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T10:01:28.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FootballClub.cs",
+              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Common\\FootballClub.cs",
+              "RelativeDocumentMoniker": "Praksa.Common\\FootballClub.cs",
+              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Common\\FootballClub.cs",
+              "RelativeToolTip": "Praksa.Common\\FootballClub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T10:01:30.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FootballPlayersController.cs",
+              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.WebApi\\Controllers\\FootballPlayersController.cs",
+              "RelativeDocumentMoniker": "Praksa.WebApi\\Controllers\\FootballPlayersController.cs",
+              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.WebApi\\Controllers\\FootballPlayersController.cs",
+              "RelativeToolTip": "Praksa.WebApi\\Controllers\\FootballPlayersController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAwFAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T12:12:21.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FootballClubsController.cs",
+              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.WebApi\\Controllers\\FootballClubsController.cs",
+              "RelativeDocumentMoniker": "Praksa.WebApi\\Controllers\\FootballClubsController.cs",
+              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.WebApi\\Controllers\\FootballClubsController.cs",
+              "RelativeToolTip": "Praksa.WebApi\\Controllers\\FootballClubsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T12:11:46.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "FootballClubFIlter.cs",
               "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Common\\FootballClubFIlter.cs",
               "RelativeDocumentMoniker": "Praksa.Common\\FootballClubFIlter.cs",
@@ -174,23 +272,12 @@
               "RelativeToolTip": "Praksa.Common\\FootballClubFIlter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T12:13:44.092Z"
+              "WhenOpened": "2026-06-08T12:13:44.092Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FootballPlayersController.cs",
-              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.WebApi\\Controllers\\FootballPlayersController.cs",
-              "RelativeDocumentMoniker": "Praksa.WebApi\\Controllers\\FootballPlayersController.cs",
-              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.WebApi\\Controllers\\FootballPlayersController.cs",
-              "RelativeToolTip": "Praksa.WebApi\\Controllers\\FootballPlayersController.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAywFAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T12:12:21.597Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "FootballPlayerFilter.cs",
               "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Common\\FootballPlayerFilter.cs",
               "RelativeDocumentMoniker": "Praksa.Common\\FootballPlayerFilter.cs",
@@ -198,19 +285,21 @@
               "RelativeToolTip": "Praksa.Common\\FootballPlayerFilter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T12:13:46.166Z"
+              "WhenOpened": "2026-06-08T12:13:46.166Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FootballClubsController.cs",
-              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.WebApi\\Controllers\\FootballClubsController.cs",
-              "RelativeDocumentMoniker": "Praksa.WebApi\\Controllers\\FootballClubsController.cs",
-              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.WebApi\\Controllers\\FootballClubsController.cs",
-              "RelativeToolTip": "Praksa.WebApi\\Controllers\\FootballClubsController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAywEQAAAABAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "DatabaseHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Repository\\DatabaseHelper.cs",
+              "RelativeDocumentMoniker": "Praksa.Repository\\DatabaseHelper.cs",
+              "ToolTip": "C:\\Users\\Luka\\source\\repos\\Praksa\\Praksa.Repository\\DatabaseHelper.cs",
+              "RelativeToolTip": "Praksa.Repository\\DatabaseHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T12:11:46.099Z"
+              "WhenOpened": "2026-06-09T09:30:31.838Z",
+              "EditorCaption": ""
             }
           ]
         }

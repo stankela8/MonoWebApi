@@ -1,5 +1,5 @@
 {
-  "openapi": "3.0.1",
+  "openapi": "3.0.4",
   "info": {
     "title": "Praksa.WebApi",
     "version": "1.0"
@@ -390,5 +390,13 @@
         "additionalProperties": false
       }
     }
-  }
+  },
+  "tags": [
+    {
+      "name": "FootballClubs"
+    },
+    {
+      "name": "FootballPlayers"
+    }
+  ]
 }

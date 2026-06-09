@@ -5,12 +5,16 @@ namespace Praksa.Repository
 {
     public class FootballClubRepository:IFootballClubRepository
     {
+        private readonly DatabaseHelper _db;
+        public FootballClubRepository(DatabaseHelper db)
+        {
+            _db = db;
+        }
         public async Task<List<FootballClub>> GetAllAsync(FootballClubFilter filter)
         {
             var clubs = new List<FootballClub>();
-            var db = new DatabaseHelper();
-
-            using var connection = db.GetConnection();
+  
+            using var connection = _db.GetConnection();
             connection.Open();
 
             var query = @"SELECT ""Id"", ""Name"", ""Country"", ""FoundedYear""
@@ -58,9 +62,8 @@ namespace Praksa.Repository
 
         public async Task<FootballClub?> GetByIdAsync(int id)
         {
-            var db = new DatabaseHelper();
 
-            using var connection = db.GetConnection();
+            using var connection = _db.GetConnection();
             connection.Open();
 
             var query = @"SELECT ""Id"", ""Name"", ""Country"", ""FoundedYear""
@@ -87,9 +90,8 @@ namespace Praksa.Repository
 
         public async Task<int> GetNextIdAsync()
         {
-            var db = new DatabaseHelper();
 
-            using var connection = db.GetConnection();
+            using var connection = _db.GetConnection();
             connection.Open();
 
             var query = @"SELECT COALESCE(MAX(""Id""), 0) + 1 FROM ""FootballClub""";
@@ -101,9 +103,8 @@ namespace Praksa.Repository
 
         public async Task<FootballClub> InsertAsync(FootballClub club)
         {
-            var db = new DatabaseHelper();
 
-            using var connection = db.GetConnection();
+            using var connection = _db.GetConnection();
             connection.Open();
 
             var query = @"INSERT INTO ""FootballClub"" (""Id"", ""Name"", ""Country"", ""FoundedYear"")
@@ -125,9 +126,7 @@ namespace Praksa.Repository
             if (existing == null)
                 return null;
 
-            var db = new DatabaseHelper();
-
-            using var connection = db.GetConnection();
+            using var connection = _db.GetConnection();
             connection.Open();
 
             var query = @"UPDATE ""FootballClub""
@@ -150,9 +149,8 @@ namespace Praksa.Repository
 
         public async Task<bool> DeleteAsync(int id)
         {
-            var db = new DatabaseHelper();
 
-            using var connection = db.GetConnection();
+            using var connection = _db.GetConnection();
             connection.Open();
 
             var query = @"DELETE FROM ""FootballClub"" WHERE ""Id"" = @id";

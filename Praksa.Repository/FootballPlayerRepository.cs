@@ -6,12 +6,17 @@ namespace Praksa.Repository
 {
     public class FootballPlayerRepository:IFootballPlayerRepository
     {
+        private readonly DatabaseHelper _db;
+        public FootballPlayerRepository(DatabaseHelper db)
+        {
+            _db = db;
+        }
+
         public async Task<List<FootballPlayer>> GetAllAsync(FootballPlayerFilter filter)
         {
             var players = new List<FootballPlayer>();
-            var db = new DatabaseHelper();
 
-            using var connection = db.GetConnection();
+            using var connection = _db.GetConnection();
             connection.Open();
 
             var query = @"SELECT ""Id"", ""Name"", ""ClubId"", ""JerseyNumber"", ""Position"", ""MarketValue""
@@ -67,9 +72,7 @@ namespace Praksa.Repository
 
         public async Task<FootballPlayer?> GetByIdAsync(int id)
         {
-            var db = new DatabaseHelper();
-
-            using var connection = db.GetConnection();
+            using var connection = _db.GetConnection();
             connection.Open();
 
             var query = @"SELECT ""Id"", ""Name"", ""ClubId"", ""JerseyNumber"", ""Position"", ""MarketValue""
@@ -99,9 +102,8 @@ namespace Praksa.Repository
         public async Task<List<FootballPlayer>> GetByClubIdAsync(int clubId)
         {
             var players = new List<FootballPlayer>();
-            var db = new DatabaseHelper();
 
-            using var connection = db.GetConnection();
+            using var connection = _db.GetConnection();
             connection.Open();
 
             var query = @"SELECT ""Id"", ""Name"", ""ClubId"", ""JerseyNumber"", ""Position"", ""MarketValue""
@@ -131,9 +133,7 @@ namespace Praksa.Repository
 
         public async Task<int> GetNextIdAsync()
         {
-            var db = new DatabaseHelper();
-
-            using var connection = db.GetConnection();
+            using var connection = _db.GetConnection();
             connection.Open();
 
             var query = @"SELECT COALESCE(MAX(""Id""), 0) + 1 FROM ""FootballPlayer""";
@@ -145,9 +145,7 @@ namespace Praksa.Repository
 
         public async Task<FootballPlayer> InsertAsync(FootballPlayer player)
         {
-            var db = new DatabaseHelper();
-
-            using var connection = db.GetConnection();
+            using var connection = _db.GetConnection();
             connection.Open();
 
             var query = @"INSERT INTO ""FootballPlayer""
@@ -172,9 +170,7 @@ namespace Praksa.Repository
             if (existing == null)
                 return null;
 
-            var db = new DatabaseHelper();
-
-            using var connection = db.GetConnection();
+            using var connection = _db.GetConnection();
             connection.Open();
 
             var query = @"UPDATE ""FootballPlayer""
@@ -201,9 +197,7 @@ namespace Praksa.Repository
 
         public async Task<bool> DeleteAsync(int id)
         {
-            var db = new DatabaseHelper();
-
-            using var connection = db.GetConnection();
+            using var connection = _db.GetConnection();
             connection.Open();
 
             var query = @"DELETE FROM ""FootballPlayer"" WHERE ""Id"" = @id";

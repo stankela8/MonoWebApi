@@ -8,19 +8,23 @@ namespace Praksa.WebApi.Controllers
     [Route("api/[controller]")]
     public class FootballPlayersController : ControllerBase
     {
+        private readonly IFootballPlayerService _service;
+        public FootballPlayersController(IFootballPlayerService service)
+        {
+            _service = service;
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetAllPlayersAsync([FromQuery] FootballPlayerFilter filter)
-        {
-            var service = new FootballPlayerService();
-            var players = await service.GetAllPlayersAsync(filter);
+        { 
+            var players = await _service.GetAllPlayersAsync(filter);
             return Ok(players);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPlayerByIdAsync(int id)
         {
-            var service = new FootballPlayerService();
-            var player = await service.GetPlayerByIdAsync(id);
+            var player = await _service.GetPlayerByIdAsync(id);
 
             if (player == null)
                 return NotFound("Player not found.");
@@ -31,8 +35,7 @@ namespace Praksa.WebApi.Controllers
         [HttpGet("byClub/{clubId}")]
         public async Task<IActionResult> GetPlayersByClubIdAsync(int clubId)
         {
-            var service = new FootballPlayerService();
-            var players = await service.GetPlayersByClubIdAsync(clubId);
+            var players = await _service.GetPlayersByClubIdAsync(clubId);
             return Ok(players);
         }
 
@@ -42,8 +45,7 @@ namespace Praksa.WebApi.Controllers
             if (player == null)
                 return BadRequest("Player data is required.");
 
-            var service = new FootballPlayerService();
-            var createdPlayer = await service.AddPlayerAsync(player);
+            var createdPlayer = await _service.AddPlayerAsync(player);
 
             if (createdPlayer == null)
                 return BadRequest("ClubId does not exist.");
@@ -57,8 +59,7 @@ namespace Praksa.WebApi.Controllers
             if (player == null)
                 return BadRequest("Updated player data is required.");
 
-            var service = new FootballPlayerService();
-            var updatedPlayer = await service.UpdatePlayerAsync(id, player);
+            var updatedPlayer = await _service.UpdatePlayerAsync(id, player);
 
             if (updatedPlayer == null)
                 return BadRequest("Player not found or ClubId does not exist.");
@@ -69,8 +70,7 @@ namespace Praksa.WebApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePlayerAsync(int id)
         {
-            var service = new FootballPlayerService();
-            var deleted = await service.DeletePlayerAsync(id);
+            var deleted = await _service.DeletePlayerAsync(id);
 
             if (!deleted)
                 return NotFound("Player not found.");

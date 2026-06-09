@@ -1,39 +1,40 @@
 ﻿using Praksa.Common;
-using Praksa.Repository;
+
 
 namespace Praksa.Service
 {
     public class FootballClubService : IFootballClubService
     {
+        private readonly IFootballClubRepository _repo;
+        public FootballClubService(IFootballClubRepository repo)
+        {
+            _repo = repo;
+        }
         public async Task<List<FootballClub>> GetAllClubsAsync(FootballClubFilter filter)
         {
-            var repo = new FootballClubRepository();
-            return await repo.GetAllAsync(filter);
+            return await _repo.GetAllAsync(filter);
         }
 
         public async Task<FootballClub?> GetClubByIdAsync(int id)
         {
-            var repo = new FootballClubRepository();
-            return await repo.GetByIdAsync(id);
+            return await _repo.GetByIdAsync(id);
         }
 
         public async Task<FootballClub> AddClubAsync(FootballClub club)
         {
-            var repo = new FootballClubRepository();
-            club.Id = await repo.GetNextIdAsync();
-            return await repo.InsertAsync(club);
+            
+            club.Id = await _repo.GetNextIdAsync();
+            return await _repo.InsertAsync(club);
         }
 
         public async Task<FootballClub?> UpdateClubAsync(int id, FootballClub club)
         {
-            var repo = new FootballClubRepository();
-            return await repo.UpdateAsync(id, club);
+            return await _repo.UpdateAsync(id, club);
         }
 
         public async Task<bool> DeleteClubAsync(int id)
         {
-            var repo = new FootballClubRepository();
-            return await repo.DeleteAsync(id);
+            return await _repo.DeleteAsync(id);
         }
     }
 }
