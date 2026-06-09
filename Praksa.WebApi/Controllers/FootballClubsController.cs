@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Praksa.Common;
 using Praksa.Service.Common;
+using Praksa.WebApi.Models;
 
 namespace Praksa.WebApi.Controllers
 {
@@ -9,9 +11,11 @@ namespace Praksa.WebApi.Controllers
     public class FootballClubsController : ControllerBase
     {
         private readonly IFootballClubService _service;
-        public FootballClubsController(IFootballClubService service)
+        private readonly IMapper _mapper;
+        public FootballClubsController(IFootballClubService service,IMapper mapper)
         {
             _service = service;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -35,29 +39,34 @@ namespace Praksa.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddClubAsync([FromBody] FootballClub club)
+        [HttpPost]
+        public async Task<IActionResult> AddClubAsync([FromBody] FootballClubUpsertRequest request)
         {
-            if (club == null)
+            if (request == null)
                 return BadRequest("Club data is required.");
 
-           
+            var club = _mapper.Map<FootballClub>(request);
             var createdClub = await _service.AddClubAsync(club);
-            return Ok(createdClub);
+            var response = _mapper.Map<FootballClubResponse>(createdClub);
+
+            return Ok(response);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateClubAsync(int id, [FromBody] FootballClub club)
+        public async Task<IActionResult> UpdateClubAsync(int id, [FromBody] FootballClubUpsertRequest request)
         {
-            if (club == null)
+            if (request == null)
                 return BadRequest("Updated club data is required.");
 
-            
+            var club = _mapper.Map<FootballClub>(request);
             var updatedClub = await _service.UpdateClubAsync(id, club);
 
             if (updatedClub == null)
                 return NotFound("Club not found.");
 
-            return Ok(updatedClub);
+            var response = _mapper.Map<FootballClubResponse>(updatedClub);
+
+            return Ok(response);
         }
 
         [HttpDelete("{id}")]

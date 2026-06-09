@@ -1,9 +1,13 @@
-using Praksa.Repository;
-using Praksa.Service;
-using Praksa.Repository.Common;
-using Praksa.Service.Common;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using AutoMapper;
+using Microsoft.Extensions.Logging.Abstractions;
+using Praksa.Common;
+using Praksa.Repository;
+using Praksa.Repository.Common;
+using Praksa.Service;
+using Praksa.Service.Common;
+using Praksa.WebApi.Models;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,7 +19,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+var mapperConfig = new MapperConfiguration(cfg =>
+{
+    cfg.CreateMap<FootballClubUpsertRequest, FootballClub>();
+    cfg.CreateMap<FootballClub, FootballClubResponse>();
+}, NullLoggerFactory.Instance);
 
+IMapper mapper = mapperConfig.CreateMapper();
+builder.Services.AddSingleton(mapper);
 //DI builder built-in
 /*
 builder.Services.AddTransient<IFootballClubService, FootballClubService>();
@@ -40,6 +51,7 @@ builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
 
     containerBuilder.RegisterType<DatabaseHelper>().AsSelf().InstancePerDependency();
 });
+
 
 var app = builder.Build();
 

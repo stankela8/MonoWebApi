@@ -48,17 +48,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/FootballClub"
+                "$ref": "#/components/schemas/FootballClubUpsertRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/FootballClub"
+                "$ref": "#/components/schemas/FootballClubUpsertRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/FootballClub"
+                "$ref": "#/components/schemas/FootballClubUpsertRequest"
               }
             }
           }
@@ -111,17 +111,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/FootballClub"
+                "$ref": "#/components/schemas/FootballClubUpsertRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/FootballClub"
+                "$ref": "#/components/schemas/FootballClubUpsertRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/FootballClub"
+                "$ref": "#/components/schemas/FootballClubUpsertRequest"
               }
             }
           }
@@ -337,13 +337,9 @@
   },
   "components": {
     "schemas": {
-      "FootballClub": {
+      "FootballClubUpsertRequest": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "name": {
             "type": "string",
             "nullable": true

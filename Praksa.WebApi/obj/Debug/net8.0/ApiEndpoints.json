@@ -34,8 +34,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "club",
-        "Type": "Praksa.Common.FootballClub",
+        "Name": "request",
+        "Type": "Praksa.WebApi.Models.FootballClubUpsertRequest",
         "IsRequired": true
       }
     ],
@@ -71,8 +71,8 @@
         "IsRequired": true
       },
       {
-        "Name": "club",
-        "Type": "Praksa.Common.FootballClub",
+        "Name": "request",
+        "Type": "Praksa.WebApi.Models.FootballClubUpsertRequest",
         "IsRequired": true
       }
     ],

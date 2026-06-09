@@ -49,3 +49,11 @@ C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\bin\Debug\net8.0\Praksa.Reposito
 C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\bin\Debug\net8.0\Praksa.Service.Common.dll
 C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\bin\Debug\net8.0\Praksa.Repository.Common.pdb
 C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\bin\Debug\net8.0\Praksa.Service.Common.pdb
+C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Luka\source\repos\Praksa\Praksa.WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
