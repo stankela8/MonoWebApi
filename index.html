@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend CRUD</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 30px;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    button {
+        padding: 8px 14px;
+        margin-right: 10px;
+        margin-bottom: 15px;
+        cursor: pointer;
+    }
+
+    form {
+        display: none;
+        width: 500px;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 25px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        background-color: #f9f9f9;
+    }
+
+    form div {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: inline-block;
+        width: 120px;
+    }
+
+    input {
+        width: 250px;
+        padding: 8px;
+    }
+
+    table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid #999;
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #efefef;
+    }
+</style>
+  </head>
+  <body>
+    <h1>Frontend CRUD vježba</h1>
+
+    <button id="addBtn" type="button">Add</button>
+    <button id="refreshBtn" type="button">Refresh</button>
+    <form id="playerForm" style="display: none">
+      <input type="hidden" id="playerId" />
+
+      <div>
+        <label for="name">Ime</label>
+        <input type="text" id="name" />
+      </div>
+
+      <div>
+        <label for="position">Pozicija</label>
+        <input type="text" id="position" />
+      </div>
+
+      <div>
+        <label for="club">Klub</label>
+        <input type="text" id="club" />
+      </div>
+
+      <div>
+        <label for="shirtNumber">Broj dresa</label>
+        <input type="number" id="shirtNumber" />
+      </div>
+
+      <div>
+        <label for="age">Godine</label>
+        <input type="number" id="age" />
+      </div>
+
+      <button id="saveBtn" type="button">Save</button>
+    </form>
+    <table border="1" cellpadding="5" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Ime</th>
+          <th>Pozicija</th>
+          <th>Klub</th>
+          <th>Broj dresa</th>
+          <th>Godine</th>
+          <th>Akcije</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>
